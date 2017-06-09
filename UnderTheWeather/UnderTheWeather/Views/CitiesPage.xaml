@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnderTheWeather.Views.CitiesPage">
+    <ScrollView>
+        <StackLayout Margin="0">
+            <Label Text="Cities" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Picker Title="Select a city" ItemsSource="{Binding Cities}" ItemDisplayBinding="{Binding name}" SelectedItem="{Binding SelectedCity}" />
+            <Label Text="{Binding SelectedCity.name}" HorizontalOptions="Center" Style="{DynamicResource TitleStyle}" />
+            <Label Text="{Binding SelectedCity.country}" FontAttributes="Italic" HorizontalOptions="Center" />
+            <Label Text="{Binding SelectedCity.coord.lon}" FontAttributes="Italic" HorizontalOptions="Center" />
+            <Label Text="{Binding SelectedCity.coord.lat}" FontAttributes="Italic" HorizontalOptions="Center" />
+
+            <Button x:Name="navigateButton" Text="View Weather" Clicked="OnNavigateButtonClicked" HorizontalOptions="Center"/>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

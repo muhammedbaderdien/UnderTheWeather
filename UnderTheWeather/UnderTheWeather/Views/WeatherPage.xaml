@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnderTheWeather.Views.WeatherPage">
+
+    <ContentPage.Content>
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0">
+            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Today}" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Image Source="{Binding ImageUrl}" HeightRequest="90" WidthRequest="90" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Temperature}" FontSize="Large"  TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding TemperatureMin}" FontSize="Medium" TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Address}" FontSize="Medium" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
